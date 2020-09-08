@@ -1,5 +1,4 @@
 import React from 'react';
-import { Text } from 'react-native';
 
 import { Wrapper, Container, CustomText } from './styles';
 
