@@ -1,21 +1,28 @@
 import { StatusBar } from 'expo-status-bar';
+import { AppLoading } from 'expo';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { useFonts } from 'expo-font';
+import Routes from './src/routes';
 
-export default function App() {
+import gilroyExtrabold from './assets/fonts/Gilroy-ExtraBold.otf';
+import gilroyLight from './assets/fonts/Gilroy-Light.otf';
+
+const App: React.FC = () => {
+  const [fontsLoaded] = useFonts({
+    gilroy_extrabold: gilroyExtrabold,
+    gilroy_light: gilroyLight,
+  });
+
+  if (!fontsLoaded) {
+    return <AppLoading />;
+  }
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
+    <>
+      <Routes />
       <StatusBar style="auto" />
-    </View>
+    </>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
