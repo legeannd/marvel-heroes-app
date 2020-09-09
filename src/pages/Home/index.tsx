@@ -2,6 +2,7 @@ import React from 'react';
 
 import { Wrapper, Container, Subtitle, Title } from './styles';
 import Header from '../../components/Header';
+import HomeButtons from '../../components/HomeButtons';
 
 const Home: React.FC = () => {
   return (
@@ -14,6 +15,8 @@ const Home: React.FC = () => {
           {'\n'}
           personagem
         </Title>
+
+        <HomeButtons />
       </Container>
     </Wrapper>
   );
