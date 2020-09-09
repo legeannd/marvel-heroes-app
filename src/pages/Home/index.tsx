@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Wrapper, Container, CustomText } from './styles';
+import { Wrapper, Container, Subtitle, Title } from './styles';
 import Header from '../../components/Header';
 
 const Home: React.FC = () => {
@@ -8,7 +8,12 @@ const Home: React.FC = () => {
     <Wrapper>
       <Header />
       <Container>
-        <CustomText>Home</CustomText>
+        <Subtitle>Bem vindo ao Marvel Heroes</Subtitle>
+        <Title>
+          Escolha o seu
+          {'\n'}
+          personagem
+        </Title>
       </Container>
     </Wrapper>
   );
