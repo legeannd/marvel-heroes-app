@@ -1,8 +1,13 @@
 import styled from 'styled-components/native';
+import colors from '../../styles/colors';
 
-export const Container = styled.View``;
+export const Container = styled.View`
+  flex-direction: row;
+  max-height: 64px;
+  justify-content: space-between;
+  align-content: center;
 
-export const HeaderIcon = styled.Image`
-  width: 71px;
-  height: 26px;
+  padding: 20px 24px;
 `;
+
+export const Button = styled.TouchableOpacity``;
