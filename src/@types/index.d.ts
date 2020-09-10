@@ -1,4 +1,5 @@
 declare module '*.otf';
+declare module '*.png';
 declare module '*.svg' {
   import { SvgProps } from 'react-native-svg';
 
