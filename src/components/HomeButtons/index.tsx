@@ -3,11 +3,11 @@ import { LinearGradient } from 'expo-linear-gradient';
 
 import { Container, RoundButton } from './styles';
 
-import HeroIcon from '../../../assets/icons/Hero.svg';
-import VillainIcon from '../../../assets/icons/Villain.svg';
-import AntiheroIcon from '../../../assets/icons/Antihero.svg';
-import AlienIcon from '../../../assets/icons/Alien.svg';
-import HumanIcon from '../../../assets/icons/Human.svg';
+import HeroIcon from '../../assets/icons/Hero.svg';
+import VillainIcon from '../../assets/icons/Villain.svg';
+import AntiheroIcon from '../../assets/icons/Antihero.svg';
+import AlienIcon from '../../assets/icons/Alien.svg';
+import HumanIcon from '../../assets/icons/Human.svg';
 
 const HomeButtons: React.FC = () => {
   return (

@@ -19,11 +19,19 @@ export const AllCharacters = styled.Text`
   color: ${colors.grey};
 `;
 
-export const CharacterRow = styled.View``;
+export const CharacterRow = styled.ScrollView.attrs({
+  horizontal: true,
+  showsHorizontalScrollIndicator: false,
+})`
+  flex-direction: row;
+  width: 100%;
+  margin-bottom: 40px;
+`;
 
 export const CharacterContainer = styled.View`
   width: 140px;
   height: 230px;
+  margin-right: 16px;
 `;
 
 export const CharacterImage = styled.ImageBackground`

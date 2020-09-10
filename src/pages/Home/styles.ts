@@ -13,7 +13,8 @@ export const Wrapper = styled.View`
 `;
 
 export const Container = styled.View`
-  padding: 0 24px;
+  padding: 0 24px 24px 24px;
+  margin-bottom: 24px;
 `;
 
 export const Subtitle = styled.Text`
