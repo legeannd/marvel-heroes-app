@@ -1,6 +1,10 @@
 import styled from 'styled-components/native';
 import colors from '../../styles/colors';
 
+interface MovieSectionProps {
+  movieSection: boolean;
+}
+
 export const Container = styled.View``;
 
 export const Section = styled.View`
@@ -8,10 +12,10 @@ export const Section = styled.View`
   justify-content: space-between;
   margin-bottom: 16px;
 `;
-export const SectionName = styled.Text`
+export const SectionName = styled.Text<MovieSectionProps>`
   font-family: gilroy_extrabold;
   font-size: 18px;
-  color: ${colors.red};
+  color: ${props => (props.movieSection ? colors.white : colors.red)};
 `;
 export const AllCharacters = styled.Text`
   font-family: gilroy_light;
@@ -32,11 +36,14 @@ export const CharacterContainer = styled.TouchableOpacity`
   width: 140px;
   height: 230px;
   margin-right: 16px;
+  border-radius: 16px;
 `;
 
 export const CharacterImage = styled.ImageBackground`
   width: 100%;
   height: 100%;
+  border-radius: 16px;
+  overflow: hidden;
   position: relative;
 `;
 

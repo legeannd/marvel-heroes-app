@@ -12,7 +12,9 @@ export const Wrapper = styled.View`
   padding-top: ${`${statusBarHeight}px`};
 `;
 
-export const Container = styled.View``;
+export const Container = styled.View`
+  padding: 0 24px;
+`;
 
 export const HeroHeader = styled.View`
   flex-direction: row;

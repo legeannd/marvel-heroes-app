@@ -8,6 +8,8 @@ import CoverRonan from './images/CoverRonan.png';
 import CoverSpiderMan from './images/CoverSpiderMan.png';
 import CoverThanos from './images/CoverThanos.png';
 import CoverVenom from './images/CoverVenom.png';
+import CoverCivilWar from './images/CoverCivilWar.png';
+import CoverHomecoming from './images/CoverHomecoming.png';
 
 import { SectionData } from '../components/Characters/index';
 
@@ -34,4 +36,9 @@ export const aliens: Array<SectionData> = [
 export const humans: Array<SectionData> = [
   { name: 'Howard Stark', civil: 'Homem de Ferro', image: CoverHowardStark },
   { name: 'Mary Jane', civil: 'Homem Aranha', image: CoverMaryJane },
+];
+
+export const movies: Array<SectionData> = [
+  { image: CoverCivilWar },
+  { image: CoverHomecoming },
 ];

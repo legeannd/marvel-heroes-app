@@ -15,19 +15,21 @@ import {
 } from './styles';
 
 export interface SectionData {
-  name: string;
-  civil: string;
+  name?: string;
+  civil?: string;
   image: string;
 }
 
 interface InfoProps {
   sectionName: string;
   sectionData: Array<SectionData>;
+  movieSection?: boolean;
 }
 
 const Characters: React.FC<InfoProps> = ({
   sectionName,
   sectionData,
+  movieSection,
 }: InfoProps) => {
   const { navigate } = useNavigation();
 
@@ -37,7 +39,7 @@ const Characters: React.FC<InfoProps> = ({
 
   const CharacterItem: React.FC = () => {
     const items = sectionData.map(char => (
-      <CharacterContainer key={char.name} onPress={() => handleGoToDetails()}>
+      <CharacterContainer key={char.image} onPress={() => handleGoToDetails()}>
         <CharacterImage source={char.image}>
           <CharacterInfo>
             <CharacterCivilName>{char.civil}</CharacterCivilName>
@@ -53,8 +55,8 @@ const Characters: React.FC<InfoProps> = ({
   return (
     <Container>
       <Section>
-        <SectionName>{sectionName}</SectionName>
-        <AllCharacters>Ver tudo</AllCharacters>
+        <SectionName movieSection={movieSection}>{sectionName}</SectionName>
+        {!movieSection && <AllCharacters>Ver tudo</AllCharacters>}
       </Section>
 
       <CharacterRow>

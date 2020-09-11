@@ -3,7 +3,7 @@ import { StatusBar } from 'expo-status-bar';
 import { useNavigation } from '@react-navigation/native';
 
 import Back from '../../assets/icons/Back.svg';
-import CoverSpiderMan from '../../assets/images/CoverSpiderMan.png';
+import CoverSpiderMan from '../../assets/images/CoverSpiderManBig.png';
 
 import {
   Wrapper,
@@ -12,6 +12,9 @@ import {
   BackButton,
   HeroBackground,
 } from './styles';
+
+import Characters from '../../components/Characters';
+import { movies } from '../../assets/data';
 
 const HeroDetails: React.FC = () => {
   const { goBack } = useNavigation();
@@ -22,17 +25,19 @@ const HeroDetails: React.FC = () => {
 
   return (
     <Wrapper>
-      <StatusBar style="light" />
+      <StatusBar style="light" translucent />
 
-      <Container>
-        <HeroBackground source={CoverSpiderMan}>
+      <HeroBackground source={CoverSpiderMan}>
+        <Container>
           <HeroHeader>
             <BackButton onPress={() => handleGoBack()}>
               <Back width={24} height={24} />
             </BackButton>
           </HeroHeader>
-        </HeroBackground>
-      </Container>
+
+          <Characters sectionName="Filmes" sectionData={movies} movieSection />
+        </Container>
+      </HeroBackground>
     </Wrapper>
   );
 };
