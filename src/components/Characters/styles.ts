@@ -28,7 +28,7 @@ export const CharacterRow = styled.ScrollView.attrs({
   margin-bottom: 40px;
 `;
 
-export const CharacterContainer = styled.View`
+export const CharacterContainer = styled.TouchableOpacity`
   width: 140px;
   height: 230px;
   margin-right: 16px;

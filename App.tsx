@@ -1,4 +1,3 @@
-import { StatusBar } from 'expo-status-bar';
 import { AppLoading } from 'expo';
 import React from 'react';
 import { useFonts } from 'expo-font';
@@ -20,7 +19,6 @@ const App: React.FC = () => {
   return (
     <>
       <Routes />
-      <StatusBar style="auto" />
     </>
   );
 };

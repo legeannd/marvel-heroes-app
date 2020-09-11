@@ -1,5 +1,6 @@
 import React, { useMemo } from 'react';
 import { FlatList } from 'react-native';
+import { StatusBar } from 'expo-status-bar';
 
 import { Wrapper, Container, Subtitle, Title } from './styles';
 import Header from '../../components/Header';
@@ -75,6 +76,8 @@ const Home: React.FC = () => {
 
   return (
     <Wrapper>
+      <StatusBar style="dark" />
+
       <Header />
       <Container>
         <FlatList<Item>

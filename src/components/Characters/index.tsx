@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 
+import { useNavigation } from '@react-navigation/native';
 import {
   Container,
   Section,
@@ -28,9 +29,15 @@ const Characters: React.FC<InfoProps> = ({
   sectionName,
   sectionData,
 }: InfoProps) => {
+  const { navigate } = useNavigation();
+
+  const handleGoToDetails = useCallback(() => {
+    navigate('HeroDetails');
+  }, [navigate]);
+
   const CharacterItem: React.FC = () => {
     const items = sectionData.map(char => (
-      <CharacterContainer key={char.name}>
+      <CharacterContainer key={char.name} onPress={() => handleGoToDetails()}>
         <CharacterImage source={char.image}>
           <CharacterInfo>
             <CharacterCivilName>{char.civil}</CharacterCivilName>
@@ -40,7 +47,7 @@ const Characters: React.FC<InfoProps> = ({
       </CharacterContainer>
     ));
 
-    return items;
+    return <>{items}</>;
   };
 
   return (
