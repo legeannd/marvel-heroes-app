@@ -1,4 +1,4 @@
-# Twitch app clone ![stacks](https://img.shields.io/badge/React%20Native-v0.62.2-brightgreen) ![stacks](https://img.shields.io/badge/Expo-v38.0.8-brightgreen) ![stacks](https://img.shields.io/badge/Stack-Typescript-blue) ![GitHub](https://img.shields.io/github/license/legeannd/twitch-app-clone)
+# Marvel Heroes app ![stacks](https://img.shields.io/badge/React%20Native-v0.62.2-brightgreen) ![stacks](https://img.shields.io/badge/Expo-v38.0.8-brightgreen) ![stacks](https://img.shields.io/badge/Stack-Typescript-blue) ![GitHub](https://img.shields.io/github/license/legeannd/twitch-app-clone)
 
 <p align="center">
   <img width="400" src="uploads/flux.gif"/>
@@ -9,7 +9,7 @@
 
 ## About the project <a id="secao-en_us"></a>
 
-This is a simple clone of the Twitch mobile app UI, with the following channels page and the user profile page, using a custom dark/light theme to change app colors.
+This app has been developed as a case study to the implementation of an interface prototyped using a UI prototyping tool, where it was developed an app with info about Marvel heroes. The UI link can be found [Here](https://www.figma.com/community/file/849367817302905364).
 
 ## Content
   * [How to run the project](#installation)
@@ -23,7 +23,7 @@ Install all dependencies using the `yarn` command, and run `yarn start` to open 
 
 ## Sobre o projeto <a id="secao-pt_br"></a>
 
-Este é um clone simples da UI do aplicativo mobile da Twitch, com a página de canais seguidos e a página de perfil do usuário, usando um tema dark/light modificado para alterar as cores do aplicativo.
+Este é um aplicativo desenvolvido como estudo de caso para a implementação de uma interface prototipada através de uma ferramenta de prototipação de UI, onde foi desenvolvido um app com informações sobre heróis da Marvel. O link da interface pode ser encontrado [Aqui](https://www.figma.com/community/file/849367817302905364).
 
 ## Conteúdos
   * [Como executar o projeto](#instalacao)
