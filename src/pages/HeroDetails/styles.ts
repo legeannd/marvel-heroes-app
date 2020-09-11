@@ -12,7 +12,7 @@ export const Wrapper = styled.View`
   padding-top: ${`${statusBarHeight}px`};
 `;
 
-export const Container = styled.View`
+export const Container = styled.ScrollView`
   padding: 0 24px;
 `;
 
@@ -68,4 +68,45 @@ export const InfoText = styled.Text`
   font-family: gilroy_light;
   font-size: 12px;
   color: ${colors.white};
+`;
+
+export const Resume = styled.Text`
+  font-family: gilroy_light;
+  font-size: 14px;
+  color: ${colors.white};
+  margin-bottom: 32px;
+`;
+
+export const AbilitiesSection = styled.View`
+  margin-bottom: 32px;
+`;
+
+export const AbilityTitle = styled.Text`
+  font-family: gilroy_extrabold;
+  font-size: 18px;
+  color: ${colors.white};
+`;
+export const AbilityValue = styled.View`
+  flex-direction: row;
+  align-items: center;
+  padding-right: 24px;
+  margin-top: 24px;
+`;
+
+export const AbilityName = styled.Text`
+  font-family: gilroy_light;
+  font-size: 12px;
+  color: ${colors.white};
+  width: 25%;
+`;
+
+export const TotalAbility = styled.View`
+  flex-direction: row;
+  width: auto;
+`;
+export const AbilityQuantity = styled.Text`
+  color: ${colors.white};
+  font-size: 10px;
+  font-family: gilroy_extrabold;
+  margin: 0 2px;
 `;
