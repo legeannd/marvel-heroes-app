@@ -6,6 +6,14 @@ import Header from '../../components/Header';
 import HomeButtons from '../../components/HomeButtons';
 import Characters from '../../components/Characters';
 
+import {
+  heroes,
+  villains,
+  antiheroes,
+  aliens,
+  humans,
+} from '../../assets/data';
+
 interface Item {
   key: string;
   render: () => JSX.Element;
@@ -34,23 +42,29 @@ const Home: React.FC = () => {
       },
       {
         key: 'C4',
-        render: () => <Characters name="Heróis" />,
+        render: () => <Characters sectionName="Heróis" sectionData={heroes} />,
       },
       {
         key: 'C5',
-        render: () => <Characters name="Vilões" />,
+        render: () => (
+          <Characters sectionName="Vilões" sectionData={villains} />
+        ),
       },
       {
         key: 'C6',
-        render: () => <Characters name="Anti-heróis" />,
+        render: () => (
+          <Characters sectionName="Anti-heróis" sectionData={antiheroes} />
+        ),
       },
       {
         key: 'C7',
-        render: () => <Characters name="Alienígenas" />,
+        render: () => (
+          <Characters sectionName="Alienígenas" sectionData={aliens} />
+        ),
       },
       {
         key: 'C8',
-        render: () => <Characters name="Humanos" />,
+        render: () => <Characters sectionName="Humanos" sectionData={humans} />,
       },
     ];
 

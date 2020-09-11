@@ -13,35 +13,44 @@ import {
   CharacterName,
 } from './styles';
 
-import SpiderManCover from '../../assets/images/CoverSpiderMan.png';
-
-interface InfoProps {
+export interface SectionData {
   name: string;
+  civil: string;
+  image: string;
 }
 
-const Characters: React.FC<InfoProps> = ({ name }) => {
-  const CharacterItem = () => (
-    <CharacterContainer>
-      <CharacterImage source={SpiderManCover}>
-        <CharacterInfo>
-          <CharacterCivilName>Peter Parker</CharacterCivilName>
-          <CharacterName>Homem Aranha</CharacterName>
-        </CharacterInfo>
-      </CharacterImage>
-    </CharacterContainer>
-  );
+interface InfoProps {
+  sectionName: string;
+  sectionData: Array<SectionData>;
+}
+
+const Characters: React.FC<InfoProps> = ({
+  sectionName,
+  sectionData,
+}: InfoProps) => {
+  const CharacterItem: React.FC = () => {
+    const items = sectionData.map(char => (
+      <CharacterContainer key={char.name}>
+        <CharacterImage source={char.image}>
+          <CharacterInfo>
+            <CharacterCivilName>{char.civil}</CharacterCivilName>
+            <CharacterName>{char.name}</CharacterName>
+          </CharacterInfo>
+        </CharacterImage>
+      </CharacterContainer>
+    ));
+
+    return items;
+  };
 
   return (
     <Container>
       <Section>
-        <SectionName>{name}</SectionName>
+        <SectionName>{sectionName}</SectionName>
         <AllCharacters>Ver tudo</AllCharacters>
       </Section>
 
       <CharacterRow>
-        <CharacterItem />
-        <CharacterItem />
-        <CharacterItem />
         <CharacterItem />
         <CharacterItem />
         <CharacterItem />
