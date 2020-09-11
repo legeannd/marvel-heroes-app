@@ -61,8 +61,6 @@ const Characters: React.FC<InfoProps> = ({
 
       <CharacterRow>
         <CharacterItem />
-        <CharacterItem />
-        <CharacterItem />
       </CharacterRow>
     </Container>
   );
